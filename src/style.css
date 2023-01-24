@@ -11,6 +11,9 @@ body {
     grid-template-columns: 1fr minmax(300px, 1000px) 1fr;
     grid-template-rows: 150px 1fr 50px;
     height: 100vh;
+    background-image: url("images/backFood.png");
+    background-position: center;
+    background-size: cover;
 }
 header {
     grid-column: span 3;
@@ -18,10 +21,15 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     padding-bottom: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: 1px solid black;
 }
 header h1 {
     font-family: "Cadillac";
+    margin-bottom: 10px;
 }
 header > div {
     display: flex;
@@ -30,12 +38,32 @@ header > div {
     gap: 20px;
 }
 header button {
-    width: 120px;
+    width: 75px;
     font-size: 1rem;
+    background: none;
+    color: white;
+    border: 0px;
+    cursor: pointer;
+    height: 50px;
+    transition: 0.3s;
+}
+header button:hover {
+    transform: translateY(-10px);
+    transition: 0.3s;
+}
+header button.active {
+    border-bottom: 1px solid white;
 }
 main {
+    text-align: center;
+    margin-top: 25px;
+    border: 1px solid black;
     grid-column: 2/3;
     grid-row: 2/3;
+    color: white;
+    margin-bottom: 25px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 25px;
 }
 .menu {
     display: grid;
@@ -47,15 +75,29 @@ main {
     display: flex;
     padding: 10px;
     gap: 10px;
-    border: 1px solid black;
+    border: 1px solid white;
+    background: rgba(0, 0, 0, 0.8);
+}
+.menu > div > div:first-child {
+    display: flex;
+    align-items: center;
 }
 .menu img {
     height: 150px;
     width: 150px;
-    border: 2px solid black;
+    border: 2px solid white;
 }
 footer {
+    border: 1px solid black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
     grid-column: span 3;
     grid-row: 3/4;
-    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+}
+a {
+    color: white;
 }

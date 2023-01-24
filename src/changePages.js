@@ -1,5 +1,6 @@
 import homePage from "./homePage";
 import menuPage from "./menuPage";
+import contactPage from "./contact";
 
 const changePages = ((status) => {
     const content = document.querySelector('#content');
@@ -22,7 +23,14 @@ const changePages = ((status) => {
             main.appendChild(menuPage());
             pageStatus = 'menu';
         }
+    };
+    const changeToContactPage = () => {
+        if (pageStatus != 'contact'); {
+            clearPage();
+            main.appendChild(contactPage());
+            pageStatus = 'contact';
+        }
     }
-    return { changeToHomePage, changeToMenupage }
+    return { changeToHomePage, changeToMenupage, changeToContactPage }
 })();
 export default changePages;
