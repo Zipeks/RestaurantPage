@@ -5,15 +5,17 @@
 }
 body {
     margin: 0px;
+    height: 100%;
+    background-image: url("images/backFood.png");
+    background-position: center;
+    background-size: cover;
 }
 #content {
+    overflow-y: scroll;
     display: grid;
     grid-template-columns: 1fr minmax(300px, 1000px) 1fr;
     grid-template-rows: 150px 1fr 50px;
     height: 100vh;
-    background-image: url("images/backFood.png");
-    background-position: center;
-    background-size: cover;
 }
 header {
     grid-column: span 3;
@@ -81,6 +83,9 @@ main {
 .menu > div > div:first-child {
     display: flex;
     align-items: center;
+}
+.menu > div > div:last-child {
+    text-align: left;
 }
 .menu img {
     height: 150px;
