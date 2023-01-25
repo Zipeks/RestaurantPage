@@ -51,7 +51,6 @@ const createNav = () => {
     div.appendChild(contactBtn);
     header.appendChild(div);
     const content = document.querySelector('#content');
-    console.log(content);
     content.appendChild(header);
 };
 export default createNav;

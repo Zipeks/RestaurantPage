@@ -1,7 +1,6 @@
 import { myMenu, images } from './menu';
 
 const menuPage = () => {
-    console.log(myMenu());
     const menu = myMenu();
     const foodImg = images();
     const wrapper = document.createElement('div');
